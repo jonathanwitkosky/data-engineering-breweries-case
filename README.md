@@ -11,9 +11,9 @@
 
    cd data-engineering-breweries-case
 
-2. Inicie o Airflow com Docker Compose:
+2. Build e Start dos Containers
 
-   docker-compose up -d
+   docker-compose up --build -d
 
 3. Acesse a interface do Airflow:
 
