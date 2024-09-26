@@ -1,8 +1,23 @@
-# Data Engineering Breweries Case
+# Data Engineering - Breweries Case
 
-## Pré-requisitos
-- Docker
-- Docker Compose
+## Descrição do Projeto
+
+Este projeto de engenharia de dados consome dados da API [Open Brewery DB](https://api.openbrewerydb.org/breweries), transforma e persiste os dados em um Data Lake seguindo a **Arquitetura Medallion** com três camadas:
+
+- **Bronze**: Dados brutos extraídos da API.
+- **Silver**: Dados transformados, armazenados em formato Parquet.
+- **Gold**: Dados agregados (contagem de cervejarias por tipo e estado) armazenados em CSV.
+
+O projeto utiliza **Airflow** para orquestração, **Pandas** para transformação de dados e **Docker** para containerização. O pipeline é agendado para execução diária.
+
+---
+
+## Requisitos
+
+Antes de iniciar, certifique-se de ter instalado:
+
+- [Docker](https://www.docker.com/get-started)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Como rodar
 
@@ -26,3 +41,7 @@
 4. Inicie o DAG brewery_pipeline para executar o pipeline de ETL.
 
 5. Os arquivos vão estar dentro da pasta /opt/airflow/dags para análise.
+
+6. Como parar o Container:
+   
+   docker-compose down
