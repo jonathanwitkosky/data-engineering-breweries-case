@@ -1,0 +1,35 @@
+/dags/__pycache__
+/logs/
+/plugins
+/data
+# Ignorar dados e arquivos de configuração locais
+/data/
+/config/
+/logs/
+
+# Ignorar arquivos de cache e temporários do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar imagens do Docker
+*.img
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar configurações do sistema operacional
+.DS_Store
+
+# Ignorar configurações de editores de texto (ex: VSCode)
+.vscode/
+.idea/
+
+# Ignorar backup de editores
+*~
+
+# Arquivos criados pela aplicação
+*.parquet
+*.json
+*.csv
+
+etl.py

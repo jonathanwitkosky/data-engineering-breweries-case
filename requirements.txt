@@ -1,0 +1,8 @@
+# Airflow dependencies
+apache-airflow==2.8.0
+
+# Requests for API consumption
+requests==2.31.0
+
+# Pandas for data transformation
+pandas==2.1.1
