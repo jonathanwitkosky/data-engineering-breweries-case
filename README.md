@@ -8,6 +8,7 @@
 
 1. Clone o repositório:
    git clone https://github.com/jonathanwitkosky/data-engineering-breweries-case.git
+
    cd data-engineering-breweries-case
 
 2. Inicie o Airflow com Docker Compose:
