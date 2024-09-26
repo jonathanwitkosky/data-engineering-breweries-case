@@ -51,9 +51,11 @@ Before starting, make sure you have installed:
 ## Orchestration
 The solution uses Apache Airflow to orchestrate the data pipeline, which includes data ingestion, transformation, and aggregation. Airflow allows:
 
-Scheduling: Configuration of periodic execution of the DAG (Directed Acyclic Diagram).
-Retries and Error Handling: If a task fails, Airflow tries to execute the task again and sends a email in case of error.
-Monitoring: The Airflow interface is used to monitor the status of tasks and workflows.
+1. Scheduling: Configuration of periodic execution of the DAG (Directed Acyclic Diagram).
+
+2. Retries and Error Handling: If a task fails, Airflow tries to execute the task again and sends a email in case of error.
+
+3. Monitoring: The Airflow interface is used to monitor the status of tasks and workflows.
    
 ## Design Choices and Trade-offs
 
