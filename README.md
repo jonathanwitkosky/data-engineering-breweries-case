@@ -48,3 +48,23 @@ Before starting, make sure you have installed:
    ```bash
    docker-compose down
    ```
+## Orchestration
+The solution uses Apache Airflow to orchestrate the data pipeline, which includes data ingestion, transformation, and aggregation. Airflow allows:
+
+Scheduling: Configuration of periodic execution of the DAG (Directed Acyclic Diagram).
+Retries and Error Handling: If a task fails, Airflow tries to execute the task again and sends a email in case of error.
+Monitoring: The Airflow interface is used to monitor the status of tasks and workflows.
+   
+## Design Choices and Trade-offs
+
+1. Orchestration: Apache Airflow
+Why it was chosen: Airflow is widely used in the market and offers a robust interface for creating and monitoring data pipelines. Furthermore, it allows easy scalability and integration with various services and tools.
+Trade-off: Airflow may have a higher overhead in terms of resources, especially if run locally. However, the flexibility and scheduling power make up for this disadvantage.
+
+2. Local Data Lake vs. Cloud (AWS S3)
+Current choice: To simplify implementation and not involve cloud services, data is stored locally.
+Trade-off: Storing data locally limits the scalability and availability of the solution. In real production, it would be preferable to use a cloud storage service like Amazon S3, which offers greater reliability and integrates well with tools like Spark and Airflow.
+
+3. Transformations in Python
+Why it was chosen: Python is a familiar language for manipulating data, and its integration with Airflow is straight, making the pipeline construction easier.
+Trade-off: Although Python is flexible, for large volumes of data, using distributed frameworks like Spark could improve performance. However, for this use case, Python was sufficient for the necessary transformations.
